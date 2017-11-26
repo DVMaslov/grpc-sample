@@ -29,6 +29,15 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 }
 
+sourceSets {
+	main {
+		java {
+			srcDirs 'build/generated/source/proto/main/grpc'
+			srcDirs 'build/generated/source/proto/main/java'
+		}
+	}
+}
+
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 
